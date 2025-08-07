@@ -1,0 +1,26 @@
+4. Reverse Engineering of an Open-Source C Graph Algorithm Project
+Project Chosen: maximetinu/Dijkstra-C
+This project implements Dijkstra’s shortest-path algorithm in C using adjacency matrices or files for input, and separates logic into modular headers: dijkstra.h for algorithm, IO_dijkstra.h for I/O, and optional graph_drawer.h for visualization 
+
+
+Project Description:
+A command-line application that reads graph data from terminal input or CSV files, computes shortest paths using Dijkstra’s algorithm, and optionally produces Graphviz output. It is organized into separate modules for clean architecture 
+github.com
+
+
+Function Analysis:
+
+initialize_graph (in dijkstra.h):
+Sets up graph data structures and allocates memory for adjacency representation.
+
+IO routines (in IO_dijkstra.h):
+Handle input parsing from CSV or user, and output formatting to terminal or file.
+
+dijkstra() (in dijkstra.h/.c):
+Executes Dijkstra’s algorithm over the graph data, computes minimum distance from a source to each reachable node.
+
+graph_drawer (optional):
+Uses Graphviz to render the computed shortest path visually.
+
+Why this project?
+It is well-structured with modular code separation, supports both file and terminal input, and includes optional graph visualization—perfect for comprehensive reverse-engineering and documentation.
